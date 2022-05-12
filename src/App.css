@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+  body{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    font-family: sans-serif;
+  }
+  li{
+    overflow: hidden;
+  }
+  .d__flex{
+    display: flex;
+  }
+  .mx__15{
+    margin: 0px 15px;
+  }
+  .pxy__30{
+    padding: 30px;
+  }
+  
