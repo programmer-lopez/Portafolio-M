@@ -14,25 +14,25 @@ function About() {
           <div className="col__2">
             <h1 className="about__heading"> About Me</h1>
             <div className="about__meta">
-              <p className="p__color">
+              <p className="about__text p__color">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered in some form, by injected humour,
                 or randomised words which dont look even slightly believable. If
                 you are going to use a passage of Lorem Ipsum,
               </p>
-              <p className="p__color">
+              <p className="about__text p__color">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered in some form, by injected humour,
                 or randomised words which dont look even slightly believable. If
                 you are going to use a passage of Lorem Ipsum,
               </p>
-              <p className=" p__color">
+              <p className="anout__text p__color">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered in some form, by injected humour,
                 or randomised words which dont look even sligh
               </p>
               <div className="about__button d__flex align__items__center">
-                <a href="#">
+                <a href="#botton">
                   <button className="about btn pointer">Downloader CV</button>
                 </a>
               </div>
