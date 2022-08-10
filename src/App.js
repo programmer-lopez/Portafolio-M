@@ -1,25 +1,41 @@
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import "./App.css";
-import About from "./components/About";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Service from "./components/Service";
 
-function App() {
+import About from "./pages/About";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
+import Experience from "./pages/Experience";
+import "./App.css";
+
+const App = () => {
   return (
-    <div className="App">
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" exact />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+          <Routes>
+            <Route path="/about" element={<About />} />
+          </Routes>
+          <Routes>
+            <Route path="/experience" element={<Experience />} />
+          </Routes>
+          <Routes>
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
+          <Routes>
+            <Route path="/blogs" element={<Blogs />} />
+          </Routes>
+          <Routes>
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
       </Router>
-      <Home />
-      <About />
-      <Service />
-    </div>
   );
-}
+};
 
 export default App;
