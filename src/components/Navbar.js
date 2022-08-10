@@ -1,59 +1,43 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
+import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { DiReact } from "react-icons/di";
+import { slide as Menu } from "react-burger-menu";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+const Navbar = () => {
   return (
     <>
-      <nav className="navbars">
-        <div className="navbars-container">
-          <Link to="/" className="navbars-logo">
-            PORTFOLIO <i className="fa-solid fa-code" />
+      <nav className="navbar">
+        <div className="navbar-container">
+          <Link to="/" exact className="navbar-logo">
+            Portfolio <DiReact />
           </Link>
-          <div className="menu-icon" onClick={handleClick}>
-           <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "navs-menu active" : "navs-menu"}>
-            <li className="navs-item">
-              <Link to="/" className="navs.links" onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className="navs-item">
-              <Link to="/" className="navs-links" onClick={closeMobileMenu}>
-                About
-              </Link>
-            </li>
-            <li className="navs-item">
-              <Link to="/" className="navs-links" onClick={closeMobileMenu}>
-                Service
-              </Link>
-            </li>
-            <li className="navs-item">
-              <Link to="/" className="navs-links" onClick={closeMobileMenu}>
-                Portfolio
-              </Link>
-            </li>
-           {/* <li className="navs-item">
-              <Link to="/" className="navs-links" onClick={closeMobileMenu}>
-                Blog
-              </Link>
-            </li>
-            <li className="navs-item">
-              <Link to="/" className="navs-links" onClick={closeMobileMenu}>
-                Contact
-              </Link>
-            </li>*/}
-          </ul>
         </div>
       </nav>
+
+      <Menu>
+        <a id="home" className="menu-item" href="/">
+          Home
+        </a>
+        <a id="about" className="menu-item" href="/about">
+          About
+        </a>
+        <a id="experience" className="menu-item" href="/experience">
+          Experience
+        </a>
+        {/*<a id="portfolio" className="menu-item" href="/portfolio">
+          Portfolio
+        </a>
+        <a id="blogs" className="menu-item" href="/blogs">
+          Blogs
+        </a>
+        */}<a id="contact" className="menu-item" href="/contact">
+          Contact
+        </a>
+      </Menu>
     </>
   );
-}
+};
 
 export default Navbar;
