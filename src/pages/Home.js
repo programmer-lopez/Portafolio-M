@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { DiReact } from "react-icons/di";
 
+
 import "../styles/Home.css";
 import img from "../imagenes/Photo__Perfil.jpeg";
 /*import logo from "../imagenes/logo.jpg";*/
